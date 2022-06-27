@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn-success">New Recipe</button>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-xs-12">
+    <app-recipe-item
+      *ngFor="let recipeElement of recipes"
+      [recipe]="recipeElement"
+    ></app-recipe-item>
+  </div>
+</div>
+
+<!-- we now need to output the recipe elements to their location in the Recipe section across  -->
+<!-- the recipe items have been passed to the recipe-item-child
+now they need to be passed from the recipe iterm child to the recipe-detail-component
+so we can use property binding to pass the elements-->
+
+<!-- remove listener and use service instead -->
+<!-- (selectedRecipe)="onRecipeSelected(recipeElement)" -->
